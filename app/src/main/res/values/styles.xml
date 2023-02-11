@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <resources>
+    <style name="dropDownStyle">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownMenuBackground</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="hintTextColor">@color/divider_color</item>
+        <item name="android:textColorHint">@color/divider_color</item>
+        <item name="android:cacheColorHint">@color/white</item>
+        <item name="android:listSelector">@color/divider_color</item>
+    </style>
+
+    <style name="DropDownMenuBackground">
+        <item name="android:background">@color/white</item>
+    </style>
+    </resources>
