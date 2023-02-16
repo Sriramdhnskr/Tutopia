@@ -39,7 +39,67 @@
     </fragment>
     <fragment
         android:id="@+id/swipeLoginFragment"
-        android:name="com.example.tutopiaapplication.login.SwipeLoginFragment"
+        android:name="com.example.tutopiaapplication.login.AuthFragment"
         android:label="fragment_swipe_login"
-        tools:layout="@layout/fragment_swipe_login" />
+        tools:layout="@layout/fragment_swipe_login" >
+        <action
+            android:id="@+id/action_swipeLoginFragment_to_homePageActivity"
+            app:destination="@id/homePageActivity" />
+        <action
+            android:id="@+id/action_swipeLoginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_swipeLoginFragment_to_otpFragment"
+            app:destination="@id/otpFragment" />
+        <action
+            android:id="@+id/action_swipeLoginFragment_to_completeProfileFragment"
+            app:destination="@id/completeProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.tutopiaapplication.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_swipeLoginFragment"
+            app:destination="@id/swipeLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.tutopiaapplication.login.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_swipeLoginFragment"
+            app:destination="@id/swipeLoginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_homePageActivity"
+            app:destination="@id/homePageActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeScreenFragment"
+        android:name="com.example.tutopiaapplication.home.view.HomeScreenFragment"
+        android:label="HomeScreenFragment" />
+    <activity
+        android:id="@+id/homePageActivity"
+        android:name="com.example.tutopiaapplication.home.HomePageActivity"
+        android:label="activity_home_page"
+        tools:layout="@layout/activity_home_page" />
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.tutopiaapplication.login.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" />
+    <fragment
+        android:id="@+id/otpFragment"
+        android:name="com.example.tutopiaapplication.login.OtpFragment"
+        android:label="OtpFragment" />
+    <fragment
+        android:id="@+id/completeProfileFragment"
+        android:name="com.example.tutopiaapplication.home.CompleteProfileFragment"
+        android:label="CompleteProfileFragment" >
+        <action
+            android:id="@+id/action_completeProfileFragment_to_homePageActivity"
+            app:destination="@id/homePageActivity" />
+    </fragment>
 </navigation>

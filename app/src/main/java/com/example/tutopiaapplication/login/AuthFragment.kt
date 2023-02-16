@@ -1,6 +1,5 @@
 package com.example.tutopiaapplication.login
 
-import android.R
 import android.content.res.Resources
 import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
@@ -9,14 +8,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.tutopiaapplication.databinding.FragmentSwipeLoginBinding
 import com.example.tutopiaapplication.login.adapter.PagerAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 
 
-class SwipeLoginFragment : Fragment() {
+class AuthFragment() : Fragment() /*, Listener*/{
     lateinit var binding: FragmentSwipeLoginBinding
 
     override fun onCreateView(
@@ -38,7 +36,7 @@ class SwipeLoginFragment : Fragment() {
             (root as LinearLayout).dividerDrawable = drawable
         }
 
-        binding.viewPager.adapter = PagerAdapter(requireActivity())
+        binding.viewPager.adapter = PagerAdapter(this)
         binding.viewPager.isUserInputEnabled = false
 
         TabLayoutMediator(binding.tabLayout2, binding.viewPager){ tab,index ->
@@ -51,4 +49,16 @@ class SwipeLoginFragment : Fragment() {
 
         return binding.root
     }
+
+   /* override fun onButtonClicked(view: View?, binding: FragmentSwipeLoginBinding?) {
+//        val currPos: Int = binding.viewPager.getCurrentItem()
+        when(view?.id){
+            com.example.tutopiaapplication.R.id.registerTxt ->{
+                binding.viewPager.currentItem = 0
+            }
+            com.example.tutopiaapplication.R.id.loginTxt ->{
+                binding.viewPager.currentItem = 1
+            }
+        }
+    }*/
 }

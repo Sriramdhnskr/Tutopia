@@ -1,24 +1,27 @@
 package com.example.tutopiaapplication.login
 
-import android.graphics.Color
+import android.app.Activity
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import android.widget.SpinnerAdapter
-import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import com.example.tutopiaapplication.R
 import com.example.tutopiaapplication.databinding.FragmentRegisterBinding
 import com.example.tutopiaapplication.login.adapter.HintAdapter
+import com.example.tutopiaapplication.utils.Listener
 
 
-class RegisterFragment : Fragment() {
+class RegisterFragment() : Fragment(){
 
     lateinit var spinnerAdapter : SpinnerAdapter
 
     lateinit var binding : FragmentRegisterBinding
+
+    lateinit var listener: Listener
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -63,6 +66,19 @@ class RegisterFragment : Fragment() {
 
         binding.classSpinner.adapter = spinnerAdapter
 
+        binding.registerBtn.setOnClickListener{
+            Navigation.findNavController(it).navigate(R.id.action_swipeLoginFragment_to_completeProfileFragment)
+        }
+
+        binding.loginTxt.setOnClickListener {
+            if(listener!=null){
+                listener.onButtonClicked()
+            }
+        }
+
         return binding.root
     }
+
+
+
 }

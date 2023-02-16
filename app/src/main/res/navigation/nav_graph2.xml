@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph2"
+    app:startDestination="@id/homeScreenFragment2">
+    <fragment
+        android:id="@+id/homeScreenFragment2"
+        android:name="com.example.tutopiaapplication.home.view.HomeScreenFragment"
+        android:label="HomeScreenFragment" >
+        <action
+            android:id="@+id/action_homeScreenFragment2_to_classFragment"
+            app:destination="@id/classFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/classFragment"
+        android:name="com.example.tutopiaapplication.home.view.ClassFragment"
+        android:label="ClassFragment" >
+        <action
+            android:id="@+id/action_classFragment_to_subjectFragment"
+            app:destination="@id/subjectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/subjectFragment"
+        android:name="com.example.tutopiaapplication.home.view.SubjectFragment"
+        android:label="SubjectFragment" >
+        <action
+            android:id="@+id/action_subjectFragment_to_chapterFragment"
+            app:destination="@id/chapterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chapterFragment"
+        android:name="com.example.tutopiaapplication.home.view.ChapterFragment"
+        android:label="fragment_chapter"
+        tools:layout="@layout/fragment_chapter" >
+        <action
+            android:id="@+id/action_chapterFragment_to_tutorialFragment"
+            app:destination="@id/tutorialFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tutorialFragment"
+        android:name="com.example.tutopiaapplication.home.view.TutorialFragment"
+        android:label="fragment_tutorial"
+        tools:layout="@layout/fragment_tutorial" />
+</navigation>
