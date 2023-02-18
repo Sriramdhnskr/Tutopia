@@ -7,13 +7,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.tutopiaapplication.R
 import com.example.tutopiaapplication.databinding.FragmentChapterBinding
 import com.example.tutopiaapplication.databinding.FragmentSubjectBinding
+import com.example.tutopiaapplication.databinding.TitleCardLayoutBinding
+import com.example.tutopiaapplication.databinding.TitleLayoutBinding
 import com.example.tutopiaapplication.home.adapter.ProductsAdapter
+import com.example.tutopiaapplication.home.adapter.TutorialsAdapter
 import com.example.tutopiaapplication.model.ChapterDetails
 import com.example.tutopiaapplication.model.SubjectDetails
 import com.example.tutopiaapplication.model.TutorialDetails
@@ -24,9 +30,11 @@ class ChapterFragment : Fragment() , ItemClickListener {
 
     lateinit var binding: FragmentChapterBinding
 
+    private lateinit var titleLayoutBinding: TitleCardLayoutBinding
+
     lateinit var data: ArrayList<Any>
 
-    lateinit var productsAdapter: ProductsAdapter
+    lateinit var tutorialsAdapter: TutorialsAdapter
 
     val bundle = Bundle()
 
@@ -37,52 +45,67 @@ class ChapterFragment : Fragment() , ItemClickListener {
         // Inflate the layout for this fragment
         binding = FragmentChapterBinding.inflate(inflater)
 
+        titleLayoutBinding = binding.title
+
+        titleLayoutBinding.headerTxt.visibility = View.GONE
+
+        titleLayoutBinding.backImg.setOnClickListener{
+            activity?.onBackPressedDispatcher?.onBackPressed()
+        }
+
+        titleLayoutBinding.userImg.setOnClickListener{
+            Navigation.findNavController(it).navigate(R.id.action_chapterFragment_to_profileFragment)
+        }
+
         val chapterDetails = if (Build.VERSION.SDK_INT >= 33) {
             arguments?.getParcelable(Constants.CHAPTER_DETAILS,ChapterDetails::class.java)
         } else {
             arguments?.getParcelable<ChapterDetails>(Constants.CHAPTER_DETAILS)
         }
 
+        val className =  arguments?.getString(Constants.PRODUCT_NAME)
+        val subjectName =  arguments?.getString(Constants.SUBJECT_NAME)
+        var chapterName = chapterDetails?.chapterName
+        /*bundle.putString(Constants.PRODUCT_NAME,className)
+        bundle.putString(Constants.SUBJECT_NAME,subjectName)
+        bundle.putString(Constants.CHAPTER_NAME,chapterDetails?.chapterName)*/
+
         val tutorialDetails = chapterDetails?.tutorials
         Log.i("chapterDetails", chapterDetails.toString())
 
         setupData()
 
-        binding.backImg.setOnClickListener{
-            activity?.onBackPressedDispatcher?.onBackPressed()
-        }
+        binding.chapterNameTxt.text = "${chapterName} , 6 Tutorials"
+        binding.classNameTxt.text = className
+        binding.subjectNameTxt.text = subjectName
 
-        if (chapterDetails != null) {
+       /* if (chapterDetails != null) {
             binding.headerTxt.text = chapterDetails.chapterName
-        }
+        }*/
 
-        binding.tilesRecyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
-        binding.tilesRecyclerView.setHasFixedSize(true)
-        binding.tilesRecyclerView.adapter = productsAdapter
-
+        binding.tutorialRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+        binding.tutorialRecyclerView.setHasFixedSize(true)
+        binding.tutorialRecyclerView.adapter = tutorialsAdapter
 
         return binding.root
     }
 
     private fun setupData() {
         data = ArrayList<Any>()
-        data.add(TutorialDetails("Tutorial 1"))
-        data.add(TutorialDetails("Tutorial 2"))
-        data.add(TutorialDetails("Tutorial 3"))
-        data.add(TutorialDetails("Tutorial 4"))
-        data.add(TutorialDetails("Tutorial 5"))
-        data.add(TutorialDetails("Tutorial 6"))
-        data.add(TutorialDetails("Tutorial 7"))
-        data.add(TutorialDetails("Tutorial 8"))
+        data.add(TutorialDetails("Introduction","Introduction","05:00 Mins"))
+        data.add(TutorialDetails("Stanza1","Stanza1","05:00 Mins"))
+        data.add(TutorialDetails("Stanza2","Stanza2","05:00 Mins"))
+        data.add(TutorialDetails("Stanza3","Stanza3","05:00 Mins"))
+        data.add(TutorialDetails("Stanza4","Stanza4","05:00 Mins"))
+        data.add(TutorialDetails("Stanza5","Stanza5","05:00 Mins"))
 
-        productsAdapter = ProductsAdapter(requireContext(), data, this)
+        tutorialsAdapter = TutorialsAdapter(requireContext(), data,this)
     }
 
     override fun onButtonClicked(model: Any, pos: Int) {
-        if (model is TutorialDetails) {
-            bundle.putParcelable(Constants.TUTORIAL_DETAILS, model)
-            view?.findNavController()
-                ?.navigate(R.id.action_chapterFragment_to_tutorialFragment, bundle)
+        if(model is TutorialDetails)
+        {
+            Toast.makeText(requireContext(),"Video played for ${model.tutorialTitle}", Toast.LENGTH_LONG).show()
         }
     }
 }

@@ -15,7 +15,7 @@ import com.example.tutopiaapplication.databinding.ActivityHomePageBinding
 import com.google.android.material.navigation.NavigationView
 
 class HomePageActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityHomePageBinding
+       private lateinit var binding: ActivityHomePageBinding
 
     private lateinit var appBarConfiguration: AppBarConfiguration
 
@@ -52,7 +52,7 @@ class HomePageActivity : AppCompatActivity() {
         navController = navHostFragment.navController
 
         appBarConfiguration = AppBarConfiguration(setOf(
-            R.id.homeScreenFragment, R.id.notification, R.id.profile, R.id.logOut), drawerLayout)
+            R.id.homeScreenFragment, R.id.profileFragment), drawerLayout)
         navView.setupWithNavController(navController)
 
 
@@ -65,6 +65,7 @@ class HomePageActivity : AppCompatActivity() {
                     GravityCompat.END
                 )
         }
+
 
         setContentView(binding.root)
     }

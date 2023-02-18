@@ -85,7 +85,7 @@ class HomeScreenFragment : Fragment() , ItemClickListener{
         if(model is ProductDetails)
         {
             bundle.putParcelable(Constants.PRODUCT_DETAILS,model)
-            view?.findNavController()?.navigate(R.id.action_homeScreenFragment2_to_classFragment,bundle)
+            view?.findNavController()?.navigate(R.id.action_homeScreenFragment_to_classFragment,bundle)
         }
     }
 }

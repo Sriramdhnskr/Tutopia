@@ -33,11 +33,11 @@ class CompleteProfileFragment : Fragment() {
         )
 
         binding.skipBtn.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_completeProfileFragment_to_homePageActivity)
+            Navigation.findNavController(it).navigate(R.id.action_completeProfileFragment_to_homeScreenFragment)
         }
 
         binding.registerBtn.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_completeProfileFragment_to_homePageActivity)
+            Navigation.findNavController(it).navigate(R.id.action_completeProfileFragment_to_homeScreenFragment)
         }
 
         binding.schoolNameSpinner.adapter = spinnerAdapter

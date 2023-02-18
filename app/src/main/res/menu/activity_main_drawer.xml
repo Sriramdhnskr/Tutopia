@@ -10,11 +10,7 @@
             android:icon="@drawable/icon_dashboard"
             android:title="Home" />
         <item
-            android:id="@+id/notification"
-            android:icon="@drawable/icon_notification"
-            android:title="Notfication" />
-        <item
-            android:id="@+id/profile"
+            android:id="@+id/profileFragment"
             android:icon="@drawable/icon_user"
             android:title="My Profile" />
         <item

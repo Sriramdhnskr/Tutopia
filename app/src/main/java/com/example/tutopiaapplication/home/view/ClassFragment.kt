@@ -40,6 +40,9 @@ class ClassFragment : Fragment() , ItemClickListener {
         } else {
             arguments?.getParcelable<ProductDetails>(Constants.PRODUCT_DETAILS)
         }
+
+        bundle.putString(Constants.PRODUCT_NAME,productDetails?.className)
+
         val subjectDetails = productDetails?.subjects
         Log.i("productDetails", productDetails.toString())
 

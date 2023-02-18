@@ -67,11 +67,11 @@ class ProductsAdapter(
                 binding.titleTxt.text = details.chapterName
                 binding.statusTxt.visibility = View.GONE
             }
-            else if(details is TutorialDetails)
+            /*else if(details is TutorialDetails)
             {
                 binding.titleTxt.text = details.tutorialName
                 binding.statusTxt.visibility = View.GONE
-            }
+            }*/
 
             Log.i("status", "position : ${position} and count : ${count}")
 

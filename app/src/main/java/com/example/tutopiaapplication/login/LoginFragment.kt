@@ -35,7 +35,7 @@ class LoginFragment : Fragment(){
         }
 
         binding.loginBtn.setOnClickListener {
-            this@LoginFragment.findNavController().navigate(R.id.action_swipeLoginFragment_to_homePageActivity)
+            this@LoginFragment.findNavController().navigate(R.id.action_swipeLoginFragment_to_homeScreenFragment)
         }
 
         binding.otpBtn.setOnClickListener {
