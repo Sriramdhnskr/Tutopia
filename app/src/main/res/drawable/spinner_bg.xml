@@ -16,7 +16,7 @@
                 </shape>
             </item>
             <item android:gravity="center_vertical|end"
-                android:end="14dp"
+                android:end="5dp"
                 android:left="5dp"
                 android:drawable="@drawable/ic_arrow_down">
             </item>

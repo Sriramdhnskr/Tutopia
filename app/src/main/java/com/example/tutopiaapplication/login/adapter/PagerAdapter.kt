@@ -3,7 +3,6 @@ package com.example.tutopiaapplication.login.adapter
 import android.content.res.Resources
 import android.util.Log
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.tutopiaapplication.login.LoginFragment
 import com.example.tutopiaapplication.login.RegisterFragment
@@ -19,7 +18,7 @@ class PagerAdapter(fragment: AuthFragment) : FragmentStateAdapter(fragment) {
     override fun createFragment(position: Int): Fragment {
         val registerFragment = RegisterFragment()
         registerFragment.listener = object : Listener{
-            override fun onButtonClicked() {
+            override fun onButtonClicked(details: String?) {
                 Log.i("button click","I have called register frag lcikc")
                 swipe.binding.viewPager.currentItem = 1
             }
@@ -27,7 +26,7 @@ class PagerAdapter(fragment: AuthFragment) : FragmentStateAdapter(fragment) {
 
         val loginFragment = LoginFragment()
         loginFragment.listener = object : Listener{
-            override fun onButtonClicked() {
+            override fun onButtonClicked(details: String?) {
                 Log.i("button click","I have called register frag lcikc")
                 swipe.binding.viewPager.currentItem = 0
             }

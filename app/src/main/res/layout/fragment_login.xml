@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".login.LoginFragment">
 
-
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -44,9 +46,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:ems="10"
-            android:hint="Mobile Number"
-            android:theme="@style/MyEditTextTheme"
+            android:hint="Mobile No."
             android:inputType="textPersonName"
+            android:theme="@style/MyEditTextTheme"
             app:layout_constraintEnd_toStartOf="@+id/guideline5"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline4"
@@ -135,6 +137,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:text="Forgot Password"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/loginBtn"
@@ -151,10 +154,10 @@
             android:insetTop="0dp"
             android:insetRight="0dp"
             android:insetBottom="0dp"
-            android:text="Request Otp"
+            android:text="Request OTP"
             android:textAllCaps="false"
             android:textColor="@color/primary_dark"
-            app:cornerRadius="20dp"
+            app:cornerRadius="24dp"
             app:layout_constraintBottom_toBottomOf="@+id/passwordEditTxt"
             app:layout_constraintEnd_toStartOf="@+id/guideline5"
             app:layout_constraintHorizontal_bias="0.5"
@@ -174,4 +177,5 @@
             app:layout_constraintTop_toTopOf="@+id/passwordEditTxt" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
 </layout>

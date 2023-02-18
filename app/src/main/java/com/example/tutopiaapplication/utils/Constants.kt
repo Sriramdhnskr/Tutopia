@@ -8,4 +8,5 @@ object Constants {
     const val TUTORIAL_DETAILS = "tutorial details"
     const val CHAPTER_NAME = "chapter name"
     const val CHAPTER_DETAILS = "tutorial details"
+    const val FROM_FRAGMENT = "from fragment"
 }

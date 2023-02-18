@@ -7,7 +7,7 @@
         android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
+        android:fitsSystemWindows="false"
         tools:context=".MainActivity"
         tools:openDrawer="start">
 
@@ -73,7 +73,6 @@
         <com.google.android.material.navigation.NavigationView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:paddingHorizontal="24dp"
             android:layout_gravity="start">
 
             <androidx.core.widget.NestedScrollView
@@ -94,6 +93,8 @@
                         android:layout_width="match_parent"
                         app:itemBackground="@color/white"
                         app:itemTextColor="@color/black"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingHorizontal="24dp"
                         app:itemIconPadding="10dp"
                         app:itemIconTint="@color/primary_dark"
                         app:headerLayout="@layout/nav_header_main"

@@ -22,4 +22,6 @@
     </string-array>
     <string name="title_activity_dash_board">DashBoardActivity</string>
     <string name="title_activity_home_page">HomePageActivity</string>
+    <string name="didn_t_receive_otp_resend">Didn\'t receive OTP?</string>
+    <string name="resend_text"><u>Resend</u></string>
 </resources>

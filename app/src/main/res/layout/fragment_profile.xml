@@ -35,6 +35,7 @@
                     android:insetTop="0dp"
                     android:insetRight="0dp"
                     android:insetBottom="0dp"
+                    android:visibility="gone"
                     android:text="Subscriptions"
                     android:textAllCaps="false"
                     android:textColor="@color/black"

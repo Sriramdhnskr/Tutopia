@@ -13,7 +13,7 @@ import com.example.tutopiaapplication.R
 import com.example.tutopiaapplication.databinding.FragmentLogoutBinding
 import com.example.tutopiaapplication.utils.TwoButtonDialogListener
 
-class LogoutFragment(var message: String = "Are you sure you want to signout?", val listener: TwoButtonDialogListener) : DialogFragment() {
+class LogoutFragment(var title  :String = "TUTOPIA",var message: String? = "Do you want to logout ?", val listener: TwoButtonDialogListener) : DialogFragment() {
     lateinit var binding: FragmentLogoutBinding
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,8 +22,8 @@ class LogoutFragment(var message: String = "Are you sure you want to signout?", 
     ): View? {
         var binding = FragmentLogoutBinding.inflate(inflater)
 
-        binding.signoutTitleTxt.text = "TUTOPIA"
-        binding.signoutdescTxt.text = "Do you want to logout ?"
+        binding.signoutTitleTxt.text = title
+        binding.signoutdescTxt.text = message
         dialog?.window?.requestFeature(Window.FEATURE_NO_TITLE)
 
         binding.nobtn.setOnClickListener {

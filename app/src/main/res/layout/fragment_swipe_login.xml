@@ -22,8 +22,8 @@
             app:tabGravity="fill"
             app:tabRippleColor="@null"
             app:tabIndicatorGravity="bottom"
-            app:tabIndicatorColor="#3F51B5"
-            app:tabSelectedTextColor="#3F51B5"
+            app:tabIndicatorColor="#034B7C"
+            app:tabSelectedTextColor="#034B7C"
             app:tabTextColor="#A1A1A1">
 
             <com.google.android.material.tabs.TabItem

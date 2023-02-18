@@ -11,6 +11,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.tutopiaapplication.R
 import com.example.tutopiaapplication.databinding.FragmentSubjectBinding
+import com.example.tutopiaapplication.databinding.TitleCardLayoutBinding
 import com.example.tutopiaapplication.home.adapter.ProductsAdapter
 import com.example.tutopiaapplication.model.ChapterDetails
 import com.example.tutopiaapplication.model.ProductDetails
@@ -21,6 +22,8 @@ import com.example.tutopiaapplication.utils.ItemClickListener
 class SubjectFragment : Fragment() , ItemClickListener{
 
     lateinit var binding : FragmentSubjectBinding
+
+    private lateinit var titleLayoutBinding: TitleCardLayoutBinding
 
     lateinit var data : ArrayList<Any>
 
@@ -34,6 +37,10 @@ class SubjectFragment : Fragment() , ItemClickListener{
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentSubjectBinding.inflate(inflater)
+
+        titleLayoutBinding = binding.title
+
+        titleLayoutBinding.headerTxt.visibility = View.GONE
 
         val subjectDetails = if (Build.VERSION.SDK_INT >= 33) {
             arguments?.getParcelable<SubjectDetails>(Constants.SUBJECT_DETAILS,SubjectDetails::class.java)
@@ -49,16 +56,16 @@ class SubjectFragment : Fragment() , ItemClickListener{
         val chapterDetails = subjectDetails?.subjectName
         Log.i("chapterDetails", chapterDetails.toString())
 
+        binding.subjectNameTxt.text = chapterDetails.toString()
 
-        binding.backImg.setOnClickListener{
+        titleLayoutBinding.backImg.setOnClickListener{
             activity?.onBackPressedDispatcher?.onBackPressed()
         }
 
         setupData()
 
-        if (subjectDetails != null) {
-            binding.headerTxt.text = subjectDetails.subjectName
-        }
+        binding.classNameTxt.text = className
+        binding.subjectDetailTxt.text = "${data.size} Chapters , 100 Tutorials"
 
         binding.tilesRecyclerView.layoutManager = GridLayoutManager(requireContext(),2)
         binding.tilesRecyclerView.setHasFixedSize(true)

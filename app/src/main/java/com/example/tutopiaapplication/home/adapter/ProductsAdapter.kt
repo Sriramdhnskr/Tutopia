@@ -1,5 +1,6 @@
 package com.example.tutopiaapplication.home.adapter
 
+import android.app.Dialog
 import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
@@ -15,12 +16,15 @@ import com.example.tutopiaapplication.model.ProductDetails
 import com.example.tutopiaapplication.model.SubjectDetails
 import com.example.tutopiaapplication.model.TutorialDetails
 import com.example.tutopiaapplication.utils.ItemClickListener
+import com.example.tutopiaapplication.utils.Listener
+import com.example.tutopiaapplication.utils.TwoButtonDialogListener
 
 class ProductsAdapter(
     private val context: Context,
     private val productsList: ArrayList<Any>,
-    private val itemClickListener: ItemClickListener
-) : RecyclerView.Adapter<ProductsAdapter.ItemViewHolder>() {
+    private val itemClickListener: ItemClickListener,
+    private val listener: Listener? = null
+) : RecyclerView.Adapter<ProductsAdapter.ItemViewHolder>(){
 
     var count = 0;
 
@@ -32,7 +36,7 @@ class ProductsAdapter(
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        holder.bind(productsList[position], position, context, count,itemClickListener)
+        holder.bind(productsList[position], position, context, count, itemClickListener,listener)
         if ((position + 1) % 2 == 0) {
             count++;
         }
@@ -49,23 +53,23 @@ class ProductsAdapter(
             position: Int,
             context: Context,
             count: Int,
-            itemClickListener: ItemClickListener
+            itemClickListener: ItemClickListener,
+            listener: Listener?
         ) {
 
-            if(details is ProductDetails)
-            {
-            binding.titleTxt.text = details.className
-            binding.statusTxt.text = details.status
-            }
-            else if(details is SubjectDetails)
-            {
-                binding.titleTxt.text = details.subjectName
-                binding.statusTxt.visibility = View.GONE
-            }
-            else if(details is ChapterDetails)
-            {
-                binding.titleTxt.text = details.chapterName
-                binding.statusTxt.visibility = View.GONE
+            if (details is ProductDetails) {
+                binding.titleTxt.text = details.className
+                binding.statusTxt.text = details.status
+                binding.tileImg.visibility = View.GONE
+                binding.titleTxt.visibility = View.VISIBLE
+            } else if (details is SubjectDetails) {
+                binding.titleTxt.visibility = View.GONE
+                binding.tileImg.visibility = View.VISIBLE
+                binding.statusTxt.text = details.subjectName
+            } else if (details is ChapterDetails) {
+                binding.titleTxt.visibility = View.GONE
+                binding.tileImg.visibility = View.VISIBLE
+                binding.statusTxt.text = details.chapterName
             }
             /*else if(details is TutorialDetails)
             {
@@ -76,7 +80,14 @@ class ProductsAdapter(
             Log.i("status", "position : ${position} and count : ${count}")
 
             binding.cardViewBg.setOnClickListener {
-                itemClickListener.onButtonClicked(details,position)
+                itemClickListener.onButtonClicked(details, position)
+            }
+
+            binding.statusTxt.setOnClickListener {
+                if(details is ProductDetails && binding.statusTxt.text=="Activate")
+                {
+                    listener?.onButtonClicked(details.className)
+                }
             }
 
             if (count % 2 == 0) {
@@ -114,4 +125,5 @@ class ProductsAdapter(
             }
         }
     }
+
 }
