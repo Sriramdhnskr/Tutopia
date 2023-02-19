@@ -2,6 +2,7 @@ package com.example.tutopiaapplication.login
 
 import android.app.Activity
 import android.content.Context
+import android.graphics.Color
 import android.opengl.Visibility
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,9 +10,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.SpinnerAdapter
+import androidx.appcompat.widget.AppCompatSpinner
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.example.tutopiaapplication.R
+import com.example.tutopiaapplication.R.*
 import com.example.tutopiaapplication.databinding.FragmentRegisterBinding
 import com.example.tutopiaapplication.login.adapter.HintAdapter
 import com.example.tutopiaapplication.utils.Constants
@@ -36,8 +40,9 @@ class RegisterFragment() : Fragment(){
 
         binding = FragmentRegisterBinding.inflate(inflater)
 
-       spinnerAdapter = HintAdapter(requireContext(),binding.boardSpinner, R.layout.hint_popup_item,R.id.spinnerTxt,
-           arrayListOf("School Name","item1","item2","item3")
+       spinnerAdapter = HintAdapter(requireContext(),
+         layout.hint_popup_item,R.id.spinnerTxt,
+           arrayListOf("Select Board","item1","item2","item3")
        )
 
         binding.boardSpinner.adapter = spinnerAdapter
@@ -72,7 +77,7 @@ class RegisterFragment() : Fragment(){
         })
 
 
-        spinnerAdapter = HintAdapter(requireContext(),binding.boardSpinner, R.layout.hint_popup_item,R.id.spinnerTxt,
+        spinnerAdapter = HintAdapter(requireContext(),layout.hint_popup_item,R.id.spinnerTxt,
             arrayListOf("Select Classes","item1","item2","item3")
         )
 
