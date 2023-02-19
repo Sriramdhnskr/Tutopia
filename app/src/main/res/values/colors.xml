@@ -1,21 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="divider_color">#E6E6DC</color>
     <color name="hint_color">#808080</color>
 
     <color name="primary_dark">#034B7C</color>
     <color name="primary_light">#006CB5</color>
     <color name="secondary_dark">#034B7C</color>
     <color name="secondary_light">#FFD300</color>
-    <color name="orange">#FF5722</color>
-    <color name="grey_text">#96988C</color>
     <color name="home_background">#F6F6FE</color>
+
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="light_red">#E4BFBF</color>
+    <color name="red">#FF0000</color>
+    <color name="yellow">#FFD500</color>
+    <color name="blue">#001AFF</color>
+    <color name="sky_blue">#00C4FF</color>
+    <color name="orange">#FF6600</color>
+    <color name="dark_purple">#6D547C</color>
+    <color name="red_text">#ff374c</color>
+    <color name="black_2">#2D2D2D</color>
+    <color name="gray">#F2F2F2</color>
+    <color name="tile_gray">#B3E4E4E4</color>
+    <color name="bgtranslucent">#4D000000</color>
+    <color name="gray_text">#707070</color>
+    <color name="blue_text">#2C4DFF</color>
+    <color name="violet_text">#B455AA</color>
+    <color name="blue_hyperlink">#2680EB</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background">#F2F2F2</color>
+    <color name="purple">#460A73</color>
+    <color name="chat_switch_purple">#E6DCFF</color>
+    <color name="purple_text">#A125FF</color>
+    <color name="divider_color">#E6E6DC</color>
+    <color name="color_target">#3194F7</color>
+    <color name="color_baseline">#7515C0</color>
+    <color name="color_actual">#6F56D4</color>
+    <color name="blue100op">#2C4DFF</color>
+    <color name="blue30op">#4D2C4DFF</color>
+    <color name="radioBtnPurple">#9F36FA</color>
+    <color name="grey_text">#96968C</color>
+    <color name="greyed_out">#E8E8E8</color>
+    <color name="grey_header">#E9E9E9</color>
+    <color name="grey_disabled">#C2C2C2</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="transparent30">#4D000000</color>
+    <color name="dark_grey">#C2C2C2</color>
+    <color name="darker_grey">#797979</color>
+    <color name="darker_grey_2">#707070</color>
+    <color name="grey_2">#EAEAEA</color>
+    <color name="grey_tile">#E4E4E4</color>
+    <color name="shimmer_color">#dddddd</color>
+    <!--ChatBot colors-->
+    <color name="chat_primary">#1C2E45</color>
+    <color name="chat_primary_text">#212121</color>
+    <color name="chat_secondary_text">#757575</color>
+    <color name="chat_input_background">#ECECEC</color>
+    <color name="chat_icon_background">#20FFFFFF</color>
+    <color name="chat_error">#ECECEC</color>
+    <color name="chat_received_message_background">#090D16</color>
+    <color name="chat_purple_text">#A125FF</color>
 
 </resources>

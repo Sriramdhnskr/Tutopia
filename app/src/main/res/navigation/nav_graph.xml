@@ -35,7 +35,9 @@
             app:destination="@id/FirstFragment" />
         <action
             android:id="@+id/action_splashFragment_to_swipeLoginFragment"
-            app:destination="@id/swipeLoginFragment" />
+            app:destination="@id/swipeLoginFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/swipeLoginFragment"
@@ -112,7 +114,9 @@
         android:label="CompleteProfileFragment" >
         <action
             android:id="@+id/action_completeProfileFragment_to_homeScreenFragment"
-            app:destination="@id/homeScreenFragment" />
+            app:destination="@id/homeScreenFragment"
+            app:popUpTo="@id/otpFragment"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_completeProfileFragment_to_profileFragment"
             app:destination="@id/profileFragment"

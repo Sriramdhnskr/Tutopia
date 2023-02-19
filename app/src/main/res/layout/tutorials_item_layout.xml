@@ -23,12 +23,12 @@
             android:id="@+id/titleTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            style="@style/Regular18Black"
+            android:textStyle="bold"
             android:layout_marginStart="20dp"
             android:maxLines="1"
+            android:ellipsize="end"
             android:text="TextView"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/guideline12"
             app:layout_constraintTop_toTopOf="@+id/videoImg" />
 
@@ -36,10 +36,9 @@
             android:id="@+id/descTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            style="@style/Regular18Black"
             android:layout_marginTop="10dp"
             android:text="TextView"
-            android:textColor="@color/black"
-            android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@+id/titleTxt"
             app:layout_constraintTop_toBottomOf="@+id/titleTxt" />
 
@@ -54,6 +53,7 @@
             android:id="@+id/playTimeTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            style="@style/Regular14Black"
             android:layout_marginTop="10dp"
             android:backgroundTint="#E6E2E2"
             android:elevation="2dp"

@@ -1,6 +1,7 @@
 package com.example.tutopiaapplication.login.adapter
 
 import android.content.Context
+import android.content.res.Resources
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -12,7 +13,6 @@ import androidx.core.content.ContextCompat
 import com.example.tutopiaapplication.R
 
 class HintAdapter(var mContext: Context,
-                  var spinner: AppCompatSpinner,
                   var layout: Int,
                   var tv: Int,
                   var items: ArrayList<String>

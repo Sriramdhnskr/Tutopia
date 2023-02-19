@@ -95,6 +95,7 @@
                         app:itemTextColor="@color/black"
                         android:layout_gravity="center_horizontal"
                         android:paddingHorizontal="24dp"
+                        app:itemTextAppearance="@style/Regular18Black"
                         app:itemIconPadding="10dp"
                         app:itemIconTint="@color/primary_dark"
                         app:headerLayout="@layout/nav_header_main"
@@ -109,7 +110,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="1"/>
 
-                    <include layout="@layout/custom_text_layout" />
+                    <include android:id="@+id/versionTile" layout="@layout/custom_text_layout" />
                 </LinearLayout>
             </androidx.core.widget.NestedScrollView>
 

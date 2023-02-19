@@ -3,9 +3,6 @@ package com.example.tutopiaapplication
 import android.app.Dialog
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
-import androidx.activity.OnBackPressedCallback
-import androidx.activity.OnBackPressedDispatcher
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -82,7 +79,6 @@ class MainActivity : AppCompatActivity(), TwoButtonDialogListener{
             false
         }
 
-
         binding.menuIcon.setOnClickListener {
             // If the navigation drawer is not open then open it, if its already open then close it.
             if (!drawerLayout.isDrawerOpen(GravityCompat.START))
@@ -92,6 +88,9 @@ class MainActivity : AppCompatActivity(), TwoButtonDialogListener{
                     GravityCompat.END
                 )
         }
+
+        val versionName = "V " + BuildConfig.VERSION_NAME
+        binding.versionTile.versionnoTxt.text = versionName
 
         setContentView(binding.root)
     }

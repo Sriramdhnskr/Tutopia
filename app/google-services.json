@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "842960952915",
+    "firebase_url": "https://srid-3808f-default-rtdb.firebaseio.com",
+    "project_id": "srid-3808f",
+    "storage_bucket": "srid-3808f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842960952915:android:80a3b18de83fba167a70a6",
+        "android_client_info": {
+          "package_name": "com.example.tmdbclient"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "842960952915-78spr2fk0q3ejbkehlppgm3t305j30bo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3HPURSiFVdmo5qSvBnDUkqLkVdSlUl0Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "842960952915-78spr2fk0q3ejbkehlppgm3t305j30bo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842960952915:android:e16866fd5105e8557a70a6",
+        "android_client_info": {
+          "package_name": "com.example.tutopiaapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "842960952915-78spr2fk0q3ejbkehlppgm3t305j30bo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3HPURSiFVdmo5qSvBnDUkqLkVdSlUl0Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "842960952915-78spr2fk0q3ejbkehlppgm3t305j30bo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842960952915:android:7c839d56bffb15327a70a6",
+        "android_client_info": {
+          "package_name": "com.rating.tmdbclient"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "842960952915-78spr2fk0q3ejbkehlppgm3t305j30bo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3HPURSiFVdmo5qSvBnDUkqLkVdSlUl0Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "842960952915-78spr2fk0q3ejbkehlppgm3t305j30bo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-3368121086179736~9053371391"
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -73,7 +73,7 @@ class CompleteProfileFragment : Fragment() {
             }
         }
 
-        spinnerAdapter = HintAdapter(requireContext(),binding.schoolNameSpinner, R.layout.hint_popup_item,R.id.spinnerTxt,
+        spinnerAdapter = HintAdapter(requireContext(),R.layout.hint_popup_item,R.id.spinnerTxt,
             arrayListOf("Select Name","item1","item2","item3")
         )
 

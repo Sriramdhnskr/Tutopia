@@ -22,4 +22,584 @@
     <style name="DropDownMenuBackground">
         <item name="android:background">@color/white</item>
     </style>
+
+
+    <style name="BtnParentNoRadius">
+        <item name="cornerRadius">0dp</item>
+    </style>
+
+    <!-- ********************************* Light Italic styles**********************-->
+    <style name="lightItalic13Blue">
+        <item name="android:textColor">@color/blue_hyperlink</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/graphik_lightitalic</item>
+    </style>
+
+    <style name="Bold22Purple">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/graphik_bold</item>
+        "
+    </style>
+    <!-- ********************************* Semi Bold styles**********************-->
+
+    <style name="semiBold12">
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/graphik_semibold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="semiBold12_black">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/graphik_semibold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/black_2</item>
+    </style>
+
+    <style name="semiBold13LightPurple">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/graphik_semibold</item>
+        "
+    </style>
+
+    <style name="Medium14LightPurple">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/graphik_medium</item>
+        <item name="android:textColor">@color/black</item>
+        "
+    </style>
+
+    <style name="Medium14Purple">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/graphik_medium</item>
+        <item name="android:textColor">@color/purple</item>
+        "
+    </style>
+
+    <style name="semiBold14Black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/graphik_semibold</item>
+        <item name="android:textAllCaps">false</item>
+        "
+    </style>
+
+    <style name="semiBold16Black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/graphik_semibold</item>
+        <item name="android:textAllCaps">false</item>
+        "
+    </style>
+
+    <style name="semiBold14">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/graphik_semibold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="semiBold14LightPurple">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/graphik_semibold</item>
+        <item name="android:textColor">@color/black</item>
+        "
+    </style>
+    <style name="semiRegular14LightPurple">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/black</item>
+        "
+    </style>
+
+    <style name="SemiBold14Purple">
+        <item name="android:textColor">@color/purple_text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/graphik_semibold</item>
+        "
+    </style>
+
+    <style name="SemiBold16Purple">
+        <item name="android:textColor">@color/purple_text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/graphik_semibold</item>
+    </style>
+
+    <style name="SemiBold14DarkPurple">
+        <item name="android:textColor">@color/purple</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/graphik_semibold</item>
+        "
+    </style>
+
+    <style name="BtnSemiBold14WhiteTxtBlackBg" parent="BtnParentNoRadius">
+        <item name="android:backgroundTint">@color/black</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/graphik_semibold</item>
+        "
+    </style>
+
+    <style name="SemiBold15Black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/graphik_semibold</item>
+        <item name="android:textAllCaps">false</item>
+        "
+    </style>
+
+    <style name="SemiBold15LightPurple">
+        <item name="android:textColor">@color/purple_text</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/graphik_semibold</item>
+    </style>
+
+    <style name="BtnSemiBold15LightPurple">
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/purple_text</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/graphik_semibold</item>
+    </style>
+
+    <style name="BtnSemiBold16Purple" parent="BtnParentNoRadius">
+        <item name="android:textColor">@color/purple</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/graphik_semibold</item>
+    </style>
+
+    <style name="BtnSemiBold16LightPurple" parent="BtnParentNoRadius">
+        <item name="android:textColor">@color/purple_text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/graphik_semibold</item>
+    </style>
+
+    <style name="SemiBold16Black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/graphik_semibold</item>
+    </style>
+
+    <style name="SemiBold16White">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/graphik_semibold</item>
+    </style>
+
+    <style name="SemiBold17Black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/graphik_semibold</item>
+
+    </style>
+
+    <style name="SemiBold17White">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/graphik_semibold</item>
+
+    </style>
+
+    <style name="semiBold17LightPurple">
+        <item name="android:textColor">@color/purple_text</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/graphik_semibold</item>
+        "
+    </style>
+
+    <style name="semiBold18Purple">
+        <item name="android:textColor">@color/purple</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/graphik_semibold</item>
+    </style>
+
+    <style name="semiBold21Purple">
+        <item name="android:textColor">@color/purple</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:fontFamily">@font/graphik_semibold</item>
+    </style>
+
+    <style name="Medium18Purple">
+        <item name="android:textColor">@color/purple</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/graphik_medium</item>
+    </style>
+
+    <style name="SemiBold25White">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:fontFamily">@font/graphik_bold</item>
+        "
+    </style>
+
+    <style name="SemiBold42White">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">42sp</item>
+        <item name="android:fontFamily">@font/graphik_semibold</item>
+        "
+    </style>
+
+    <style name="SemiBold29Black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">29sp</item>
+        <item name="android:fontFamily">@font/graphik_semibold</item>
+    </style>
+
+
+    <!-- ********************************* Regular styles**********************-->
+
+    <style name="Regular16ChatPurple">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/chat_purple_text</item>
+    </style>
+
+    <style name="Regular22White">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        "
+    </style>
+
+    <style name="Regular22Black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+    </style>
+
+
+    <style name="Regular15Black">
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/black</item>
+        "
+    </style>
+
+    <style name="Regular15Blue">
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/blue100op</item>
+        "
+    </style>
+
+    <style name="Regular15Gray_text">
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/gray_text</item>
+        "
+    </style>
+
+    <style name="Regular17DarkGrey">
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/darker_grey_2</item>
+        "
+    </style>
+
+    <style name="Regular15Grey">
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/grey_text</item>
+        "
+    </style>
+    <style name="Regular14Black">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/black</item>
+        "
+    </style>
+
+    <style name="RegularItalic14Black">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/graphik_regularitalic</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Regular14Purple">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/purple</item>
+    </style>
+
+    <style name="Regular14Grey">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/grey_text</item>
+    </style>
+    <style name="Regular14DarkerGrey">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/darker_grey</item>
+    </style>
+    <style name="Regular14DarkerGrey_2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/darker_grey_2</item>
+    </style>
+
+    <style name="Regular14White">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/white</item>
+        "
+    </style>
+
+    <style name="SemiBold14White">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/graphik_semibold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Regular14BlackOnlyStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/black</item>
+        "
+    </style>
+
+    <style name="Regular10Black">
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/black</item>
+        "
+    </style>
+
+    <style name="Regular12Grey">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/grey_text</item>
+        "
+    </style>
+
+    <style name="Regular12Black">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/black</item>
+        "
+    </style>
+
+    <style name="Regular12Red">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/red_text</item>
+        "
+    </style>
+
+    <style name="Regular13Grey">
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/grey_text</item>
+        "
+    </style>
+
+    <style name="Regular13Black">
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/black</item>
+        "
+    </style>
+
+    <style name="Regular14Blue">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/blue100op</item>
+    </style>
+
+    <style name="Regular12Gray">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/gray_text</item>
+        "
+    </style>
+
+    <style name="Regular14Gray">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/gray_text</item>
+        "
+    </style>
+
+    <style name="Regular12Blue">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/blue_text</item>
+        "
+    </style>
+
+    <style name="Regular16Black">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Regular16Purple">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/purple</item>
+    </style>
+
+    <style name="Regular16White">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Regular18Black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/graphik_regular</item>
+    </style>
+
+    <!-- ********************************* Bold styles**********************-->
+
+    <style name="Bold36White">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:fontFamily">@font/graphik_bold</item>
+        "
+    </style>
+
+    <style name="Bold14Black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/graphik_bold</item>
+        "
+    </style>
+
+    <style name="Bold14Blue">
+        <item name="android:textColor">@color/blue_hyperlink</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/graphik_bold</item>
+        "
+    </style>
+
+    <style name="Bold16Black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/graphik_bold</item>
+        "
+    </style>
+
+    <!-- ********************************* Medium styles**********************-->
+
+    <style name="Medium16Black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/graphik_medium</item>
+        "
+    </style>
+
+    <style name="Medium17Black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/graphik_medium</item>
+        "
+    </style>
+
+    <style name="Medium18Black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/graphik_medium</item>
+        "
+    </style>
+
+    <style name="Medium15Black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/graphik_medium</item>
+        "
+    </style>
+
+    <style name="Medium15Blue">
+        <item name="android:textColor">@color/blue_hyperlink</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/graphik_medium</item>
+        "
+    </style>
+
+    <style name="Medium14Black">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/graphik_medium</item>
+        <item name="android:textColor">@color/black</item>
+        "
+    </style>
+    <style name="Medium14White">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/graphik_medium</item>
+        <item name="android:textColor">@color/white</item>
+        "
+    </style>
+
+    <style name="Medium12DarkGrey">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/graphik_medium</item>
+        <item name="android:textColor">@color/darker_grey_2</item>
+    </style>
+
+    <style name="Medium13Black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/graphik_medium</item>
+        "
+    </style>
+    <style name="Medium12Black_2">
+        <item name="android:textColor">@color/black_2</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/graphik_medium</item>
+        "
+    </style>
+    <style name="MPATable_Count">
+        <item name="android:textColor">@color/black_2</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">10sp</item>
+        <item name="android:paddingBottom">10sp</item>
+        <item name="android:fontFamily">@font/graphik_medium</item>
+    </style>
+    <style name="MPATable_Heading">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">5sp</item>
+        <item name="android:paddingBottom">5sp</item>
+        <item name="android:fontFamily">@font/graphik_medium</item>
+        <item name="android:background">@color/black</item>
+    </style>
+
+
+    <style name="Medium13Blue">
+        <item name="android:textColor">@color/blue_hyperlink</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/graphik_medium</item>
+        "
+    </style>
+
+    <style name="TextAppearance.MyApp.Title.Collapsed" parent="android:TextAppearance">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextAppearance.MyApp.Title.Expanded" parent="android:TextAppearance">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="BtnFont">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TabLayoutStyle" parent="Base.Widget.Design.TabLayout">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="SpinnerTheme" parent="android:Widget.Material.Spinner.Underlined">
+        <item name="android:background">@drawable/spinner_dialog_bg
+        </item>
+        <item name="android:popupBackground">@drawable/spinner_dialog_bg
+        </item>
+
+        <item name="android:textAlignment">textStart</item>
+    </style>
+
     </resources>
