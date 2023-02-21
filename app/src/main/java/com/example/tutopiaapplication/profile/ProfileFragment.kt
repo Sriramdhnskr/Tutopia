@@ -42,7 +42,7 @@ class ProfileFragment : Fragment() {
         }
 
         binding.changePasswordTxt.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_profileFragment_to_forgotPasswordFragment,bundle)
+            Navigation.findNavController(it).navigate(R.id.action_profileFragment_to_completeProfileFragment,bundle)
         }
 
 

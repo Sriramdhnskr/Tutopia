@@ -31,7 +31,7 @@ class SplashFragment : Fragment() {
             {
                 view?.findNavController()?.navigate(R.id.action_splashFragment_to_swipeLoginFragment)
             },
-            3000
+            5000
         )
 
       /*  mainViewModel.isLoading.observe(viewLifecycleOwner, Observer {
