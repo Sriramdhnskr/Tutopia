@@ -15,7 +15,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:tabBackground="@color/white"
+            app:tabBackground="@color/greyWhite_background"
             app:tabIndicator="@drawable/tab_indicator"
             app:tabMaxWidth="0dp"
             app:tabTextAppearance="@style/TabLayoutStyle"

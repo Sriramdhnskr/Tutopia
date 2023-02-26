@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,72 +8,82 @@
     tools:context=".splashscreen.SplashFragment">
 
 
-    <!-- <RelativeLayout
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true">
 
-        <ImageView
-            android:layout_centerInParent="true"
-            android:id="@+id/ivMain"
+        <!--   <ImageView
+               android:layout_centerInParent="true"
+               android:id="@+id/ivMain"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/splash_icon_center" />-->
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/splashGigImg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/splash_icon_center" />
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_spalsh_logo" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splash_bg"
+        tools:context=".splashscreen.SplashFragment">
+
+        &lt;!&ndash; <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:id="@+id/ivMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/splash_icon_center" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/splashImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_splash" />
+
+
+        </RelativeLayout>&ndash;&gt;
+
+        <ImageView
+            android:id="@+id/spalshCenterImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/splash_icon_center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <pl.droidsonroids.gif.GifImageView
             android:id="@+id/splashImg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:src="@drawable/ic_splash" />
+            android:src="@drawable/ic_splash"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-
-    </RelativeLayout>-->
-
-    <ImageView
-        android:id="@+id/spalshCenterImg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/splash_icon_center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/splashImg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_splash"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-    <!--<?xml version="1.0" encoding="utf-8"?>-->
-<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    tools:context=".splashscreen.SplashFragment">-->
-
-<!--    &lt;!&ndash;<ImageView-->
-<!--        android:id="@+id/splashImg"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:scaleType="fitXY"-->
-<!--        />&ndash;&gt;-->
-
-<!--    <pl.droidsonroids.gif.GifImageView-->
-<!--        android:id="@+id/splashImg"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:adjustViewBounds="false"-->
-<!--        android:scaleType="fitXY"-->
-<!--        android:src="@drawable/ic_splash" />-->
-
-<!--</FrameLayout>-->
+    </androidx.constraintlayout.widget.ConstraintLayout>-->

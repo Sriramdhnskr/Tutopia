@@ -45,19 +45,8 @@
                     app:layout_constraintTop_toBottomOf="@id/editBtn" />
 
                 <TextView
-                    android:id="@+id/nameValueTxt9"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="name"
-                    android:textColor="@color/black"
-                    app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalRight"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/guidelineverticalLeft"
-                    app:layout_constraintTop_toBottomOf="@+id/namelblTxt" />
-
-                <TextView
                     android:id="@+id/addresslblTxt"
+                    style="@style/ProductSansRegular18Black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -68,6 +57,7 @@
 
                 <TextView
                     android:id="@+id/addressValueTxt"
+                    style="@style/ProductSansBold18Black"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -80,6 +70,7 @@
 
                 <TextView
                     android:id="@+id/schoollblTxt"
+                    style="@style/ProductSansRegular18Black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -90,11 +81,11 @@
 
                 <TextView
                     android:id="@+id/schoolValueTxt"
+                    style="@style/ProductSansBold18Black"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="school"
-                    android:textColor="@color/black"
                     app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalRight"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="@+id/guidelineverticalLeft"
@@ -102,6 +93,7 @@
 
                 <TextView
                     android:id="@+id/classlblTxt"
+                    style="@style/ProductSansRegular18Black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -112,6 +104,7 @@
 
                 <TextView
                     android:id="@+id/classValueTxt"
+                    style="@style/ProductSansBold18Black"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -124,6 +117,7 @@
 
                 <TextView
                     android:id="@+id/pincodelblTxt"
+                    style="@style/ProductSansRegular18Black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -134,11 +128,11 @@
 
                 <TextView
                     android:id="@+id/pincodeValueTxt"
+                    style="@style/ProductSansBold18Black"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="pincode"
-                    android:textColor="@color/black"
                     app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalRight"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="@+id/guidelineverticalLeft"
@@ -146,6 +140,7 @@
 
                 <TextView
                     android:id="@+id/citylblTxt"
+                    style="@style/ProductSansRegular18Black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -156,10 +151,11 @@
 
                 <TextView
                     android:id="@+id/cityValueTxt"
+                    style="@style/ProductSansBold18Black"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="city"
+                    android:text="City"
                     android:textColor="@color/black"
                     app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalRight"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -168,6 +164,7 @@
 
                 <TextView
                     android:id="@+id/whatsappnolblTxt"
+                    style="@style/ProductSansRegular18Black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -178,6 +175,7 @@
 
                 <TextView
                     android:id="@+id/whatsappnoValueTxt"
+                    style="@style/ProductSansBold18Black"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -190,6 +188,7 @@
 
                 <TextView
                     android:id="@+id/mobilenolblTxt"
+                    style="@style/ProductSansRegular18Black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -200,10 +199,11 @@
 
                 <TextView
                     android:id="@+id/mobilenoValueTxt"
+                    style="@style/ProductSansBold18Black"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="mobile no"
+                    android:text="Mobile no"
                     android:textColor="@color/black"
                     app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalRight"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -212,8 +212,8 @@
 
                 <ImageView
                     android:id="@+id/profileImg"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_marginTop="20dp"
                     android:src="@drawable/user_placeholder"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -222,6 +222,7 @@
 
                 <TextView
                     android:id="@+id/namelblTxt"
+                    style="@style/ProductSansRegular18Black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -246,11 +247,12 @@
 
                 <TextView
                     android:id="@+id/nameValueTxt"
+                    style="@style/ProductSansBold18Black"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="name"
                     android:textColor="@color/black"
+                    android:text="Name"
                     app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalRight"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="@+id/guidelineverticalLeft"
@@ -276,6 +278,7 @@
 
                 <TextView
                     android:id="@+id/changePasswordTxt"
+                    style="@style/ProductSansBold16Black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"

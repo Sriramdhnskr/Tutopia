@@ -6,15 +6,17 @@
 
 <androidx.core.widget.NestedScrollView
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/greyWhite_background">
 
         <EditText
             android:id="@+id/passwordEditTxt"
-            style="@style/Regular18Black"
+            style="@style/ProductSansRegular18Black"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -45,7 +47,7 @@
 
         <EditText
             android:id="@+id/mobilenoEditTxt"
-            style="@style/Regular18Black"
+            style="@style/ProductSansRegular18Black"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -62,8 +64,8 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="20dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="30dp"
             android:scaleType="fitCenter"
             android:src="@drawable/login"
             app:layout_constraintDimensionRatio="1:1"
@@ -73,12 +75,11 @@
 
         <TextView
             android:id="@+id/loginHeaderTxt"
-            style="@style/SemiBold25White"
+            style="@style/ProductSansBold35Black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="Login"
-            android:textColor="@color/black"
             app:layout_constraintEnd_toStartOf="@+id/guideline5"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline4"
@@ -86,10 +87,10 @@
 
         <TextView
             android:id="@+id/loginDescTxt"
-            style="@style/Regular18Black"
+            style="@style/ProductSansRegular20Black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:text="Glad to see you!"
             app:layout_constraintEnd_toStartOf="@+id/guideline5"
             app:layout_constraintHorizontal_bias="0.0"
@@ -118,7 +119,7 @@
 
         <TextView
             android:id="@+id/registerdescTxt"
-            style="@style/Regular16Black"
+            style="@style/ProductSansRegular16Black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -131,12 +132,11 @@
 
         <TextView
             android:id="@+id/registerTxt"
-            style="@style/Regular16Black"
+            style="@style/ProductSansBold16Black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="@string/register_underline_text"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/registerdescTxt"
             app:layout_constraintEnd_toEndOf="@+id/loginBtn"
             app:layout_constraintHorizontal_bias="0.5"
@@ -145,18 +145,17 @@
 
         <TextView
             android:id="@+id/forgetPasswordTxt"
-            style="@style/Regular16Black"
+            style="@style/ProductSansBold16Black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:text="Forgot Password"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/loginBtn"
             app:layout_constraintStart_toStartOf="@+id/guideline4"
             app:layout_constraintTop_toBottomOf="@+id/registerdescTxt"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/otpBtn"
@@ -182,7 +181,7 @@
 
         <TextView
             android:id="@+id/orTxt"
-            style="@style/Regular18Black"
+            style="@style/ProductSansRegular16Grey"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Or"

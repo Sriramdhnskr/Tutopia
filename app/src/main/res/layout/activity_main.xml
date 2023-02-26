@@ -95,7 +95,7 @@
                         app:itemTextColor="@color/black"
                         android:layout_gravity="center_horizontal"
                         android:paddingHorizontal="24dp"
-                        app:itemTextAppearance="@style/Regular18Black"
+                        app:itemTextAppearance="@style/ProductSansRegular18Black"
                         app:itemIconPadding="10dp"
                         app:itemIconTint="@color/primary_dark"
                         app:headerLayout="@layout/nav_header_main"

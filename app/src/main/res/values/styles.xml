@@ -247,6 +247,57 @@
 
     <!-- ********************************* Regular styles**********************-->
 
+    <style name="ProductSansRegular16Black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/product_sans_regular</item>
+    </style>
+
+    <style name="ProductSansBold16Black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/product_sans_bold</item>
+    </style>
+
+    <style name="ProductSansRegular16Grey">
+        <item name="android:textColor">@color/grey_text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/product_sans_regular</item>
+    </style>
+
+    <style name="ProductSansRegular18Black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/product_sans_regular</item>
+    </style>
+
+    <style name="ProductSansBold18Black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/product_sans_bold</item>
+    </style>
+
+    <style name="ProductSansRegular20Black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/product_sans_regular</item>
+    </style>
+
+    <style name="ProductSansRegular18Grey">
+        <item name="android:textColor">@color/grey_text</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/product_sans_regular</item>
+    </style>
+
+    <style name="ProductSansBold35Black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:fontFamily">@font/product_sans_bold</item>
+    </style>
+
+
+
+
     <style name="Regular16ChatPurple">
         <item name="android:textSize">16sp</item>
         <item name="android:fontFamily">@font/graphik_regular</item>
@@ -573,22 +624,14 @@
         "
     </style>
 
-    <style name="TextAppearance.MyApp.Title.Collapsed" parent="android:TextAppearance">
-        <item name="android:textColor">@android:color/black</item>
-        <item name="android:textSize">18sp</item>
-    </style>
-
-    <style name="TextAppearance.MyApp.Title.Expanded" parent="android:TextAppearance">
-        <item name="android:textColor">@android:color/black</item>
-        <item name="android:textSize">16sp</item>
-    </style>
-
     <style name="BtnFont">
+        <item name="fontFamily">@font/product_sans_regular</item>
         <item name="android:textSize">16sp</item>
         <item name="android:letterSpacing">0</item>
     </style>
 
     <style name="TabLayoutStyle" parent="Base.Widget.Design.TabLayout">
+        <item name="fontFamily">@font/product_sans_bold</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textAllCaps">true</item>
     </style>

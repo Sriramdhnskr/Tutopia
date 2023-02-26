@@ -5,6 +5,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/greyWhite_background"
     tools:context=".login.RegisterFragment">
 
     <androidx.core.widget.NestedScrollView
@@ -78,8 +79,8 @@
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
-                android:background="@null"
                 android:entries="@array/items"
+                android:background="@null"
                 android:minHeight="40dp"
                 android:spinnerMode="dialog"
                 android:theme="@style/dropDownStyle"
@@ -110,7 +111,7 @@
                 android:id="@+id/nameEditTxt"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                style="@style/Regular18Black"
+                style="@style/ProductSansRegular18Black"
                 android:textColorHint="@color/grey_text"
                 android:layout_marginTop="20dp"
                 android:ems="10"
@@ -138,13 +139,13 @@
 
             <EditText
                 android:id="@+id/mobilenoEditTxt"
+                style="@style/ProductSansRegular18Black"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:ems="10"
                 android:hint="Mobile No."
                 android:inputType="textPersonName"
-                style="@style/Regular18Black"
                 android:textColorHint="@color/grey_text"
                 android:textCursorDrawable="@drawable/cursor_edittext"
                 android:theme="@style/MyEditTextTheme"
@@ -177,7 +178,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                style="@style/Regular16Black"
+                style="@style/ProductSansRegular16Black"
                 android:text="Already have an account?"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/loginTxt"
@@ -189,7 +190,7 @@
 
             <TextView
                 android:id="@+id/loginTxt"
-                style="@style/Regular16Black"
+                style="@style/ProductSansBold18Black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"

@@ -1,6 +1,8 @@
 package com.example.tutopiaapplication.splashscreen
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -25,14 +27,13 @@ class SplashFragment : Fragment() {
     ): View? {
         binding = FragmentSplashBinding.inflate(inflater)
 
-        Glide.with(this).load(R.drawable.ic_splash).into(binding.splashImg);
+//        Glide.with(this).load(R.drawable.ic_splash).into(binding.splashImg);
 
-        binding.splashImg.postDelayed(
-            {
+        Handler(Looper.getMainLooper()).postDelayed(object : Runnable {
+            override fun run() {
                 view?.findNavController()?.navigate(R.id.action_splashFragment_to_swipeLoginFragment)
-            },
-            5000
-        )
+            }
+        },3500)
 
       /*  mainViewModel.isLoading.observe(viewLifecycleOwner, Observer {
             if (it == false) {
