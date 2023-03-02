@@ -1,0 +1,53 @@
+package com.example.tutopiaapplication.presentation.logout
+
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.view.Window
+import androidx.fragment.app.DialogFragment
+import com.example.tutopiaapplication.R
+import com.example.tutopiaapplication.databinding.FragmentLogoutBinding
+import com.example.tutopiaapplication.utils.TwoButtonDialogListener
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
+class LogoutFragment(var title  :String = "TUTOPIA",var message: String? = "Do you want to logout ?", val listener: TwoButtonDialogListener) : DialogFragment() {
+    lateinit var binding: FragmentLogoutBinding
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        var binding = FragmentLogoutBinding.inflate(inflater)
+
+        binding.signoutTitleTxt.text = title
+        binding.signoutdescTxt.text = message
+        dialog?.window?.requestFeature(Window.FEATURE_NO_TITLE)
+
+        binding.nobtn.setOnClickListener {
+            listener.clickEvent(it,dialog)
+        }
+        binding.yesbtn.setOnClickListener {
+            listener.clickEvent(it,dialog)
+        }
+//        dialog?.setCanceledOnTouchOutside(false)
+        return binding.root
+    }
+    override fun onStart() {
+        super.onStart()
+        dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+        /* val dialog: Dialog? = dialog
+         dialog?.window?.setDimAmount(0f)
+//
+         if (dialog != null) {
+             val width = ViewGroup.LayoutParams.MATCH_PARENT
+             val height = ViewGroup.LayoutParams.MATCH_PARENT
+             dialog.window?.setLayout(width, height)
+         }*/
+    }
+}

@@ -10,7 +10,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/home_background"
-    tools:context=".home.view.HomeScreenFragment">
+    tools:context=".presentation.home.view.HomeScreenFragment">
 
     <TextView
         android:id="@+id/greetingsTxt"

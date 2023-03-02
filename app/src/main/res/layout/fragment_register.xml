@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/greyWhite_background"
-    tools:context=".login.RegisterFragment">
+    tools:context=".presentation.auth.register.view.RegisterFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -32,7 +32,6 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
                 android:background="@null"
-                android:entries="@array/items"
                 android:spinnerMode="dialog"
                 android:theme="@style/dropDownStyle"
                 android:visibility="gone"
@@ -73,13 +72,11 @@
                 app:layout_constraintStart_toStartOf="@+id/guideline2"
                 app:layout_constraintTop_toBottomOf="@+id/schoolEditTxt" />
 
-
             <androidx.appcompat.widget.AppCompatSpinner
                 android:id="@+id/boardSpinner"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
-                android:entries="@array/items"
                 android:background="@null"
                 android:minHeight="40dp"
                 android:spinnerMode="dialog"
@@ -145,7 +142,8 @@
                 android:layout_marginTop="20dp"
                 android:ems="10"
                 android:hint="Mobile No."
-                android:inputType="textPersonName"
+                android:inputType="number"
+                android:maxLength="10"
                 android:textColorHint="@color/grey_text"
                 android:textCursorDrawable="@drawable/cursor_edittext"
                 android:theme="@style/MyEditTextTheme"
