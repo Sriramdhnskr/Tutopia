@@ -6,7 +6,6 @@ import androidx.lifecycle.viewModelScope
 import com.example.tutopiaapplication.core.util.Resource
 import com.example.tutopiaapplication.data.api.model.register.RegisterRequestEntity
 import com.example.tutopiaapplication.data.api.model.register.RegisterResponseEntity
-import com.example.tutopiaapplication.data.api.model.register.board.BoardsModel
 import com.example.tutopiaapplication.domain.model.*
 import com.example.tutopiaapplication.domain.usecase.*
 import kotlinx.coroutines.channels.Channel
@@ -43,7 +42,7 @@ class RegisterViewModel(
     private val _errorEvent = MutableSharedFlow<String>()
     val errorEvent: SharedFlow<String> = _errorEvent
 
-    private val validationEventChannel = Channel<ValidationEvent>()
+    private val validationEventChannel = Channel<ValidationRegisterEvent>()
     val validationEvents = validationEventChannel.receiveAsFlow()
 
     init {
@@ -135,7 +134,7 @@ class RegisterViewModel(
 
             viewModelScope.launch {
                 validationEventChannel.send(
-                    ValidationEvent.Error(
+                    ValidationRegisterEvent.Error(
                         _registerState.value.nameError,
                         _registerState.value.mobileNoError,
                         registerState.value.boardError,
@@ -147,7 +146,7 @@ class RegisterViewModel(
         }
         viewModelScope.launch {
             validationEventChannel.send(
-                ValidationEvent.Success(
+                ValidationRegisterEvent.Success(
                     _registerState.value.name,
                     _registerState.value.mobileNumber,
                     registerState.value.board,

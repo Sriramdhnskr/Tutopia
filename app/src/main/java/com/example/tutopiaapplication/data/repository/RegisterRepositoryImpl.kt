@@ -22,7 +22,7 @@ class RegisterRepositoryImpl(private val registerDataSource: RegisterDataSource)
             emit(Resource.Loading())
             val response = registerDataSource.registerUser(requestRequestEntity)
             if (response.isSuccessful && response.body() != null) {
-                emit(Resource.Success(response.body()!!))
+                emit(Resource.Success(response.body()!!, message =response.body()!!.message ))
             } else {
                 val errorBody = response.errorBody()?.string()
                 val errorResponse = Gson().fromJson(errorBody, ErrorResponse::class.java)

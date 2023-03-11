@@ -6,27 +6,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
-import android.widget.ArrayAdapter
 import android.widget.SpinnerAdapter
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
-import androidx.datastore.dataStore
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.repeatOnLifecycle
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.example.tutopiaapplication.R
-import com.example.tutopiaapplication.R.*
+import com.example.tutopiaapplication.R.layout
 import com.example.tutopiaapplication.core.util.Resource
 import com.example.tutopiaapplication.data.api.model.register.RegisterRequestEntity
 import com.example.tutopiaapplication.databinding.FragmentRegisterBinding
-import com.example.tutopiaapplication.domain.model.Board
 import com.example.tutopiaapplication.domain.model.MappedItem
 import com.example.tutopiaapplication.domain.model.RegisterEvent
-import com.example.tutopiaapplication.domain.model.ValidationEvent
+import com.example.tutopiaapplication.domain.model.ValidationRegisterEvent
 import com.example.tutopiaapplication.presentation.auth.adapter.HintAdapter
 import com.example.tutopiaapplication.presentation.auth.register.viewModel.RegisterViewModel
 import com.example.tutopiaapplication.presentation.auth.register.viewModel.RegisterViewModelFactory
@@ -34,11 +28,12 @@ import com.example.tutopiaapplication.utils.Constants
 import com.example.tutopiaapplication.utils.DataStoreUtil
 import com.example.tutopiaapplication.utils.Listener
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -52,13 +47,15 @@ class RegisterFragment() : Fragment() {
 
     lateinit var listener: Listener
 
-    var isNavigated = false
+    private var registerFlowJob: Job? = null
 
     @Inject
     lateinit var dataStore: DataStoreUtil
 
     @Inject
     lateinit var registerFactory: RegisterViewModelFactory
+
+    var isNavigated = false
 
 //    private val viewModel by viewModels<RegisterViewModel>()
 
@@ -78,6 +75,9 @@ class RegisterFragment() : Fragment() {
 
         viewModel = ViewModelProvider(this, registerFactory).get(RegisterViewModel::class.java)
 
+        viewLifecycleOwner.lifecycleScope.launchWhenStarted {
+            dataStore.clearDataStore()
+        }
 
         binding.nameEditTxt.addTextChangedListener {
             viewModel.onEvent(RegisterEvent.NameChanged(it.toString()))
@@ -187,18 +187,19 @@ class RegisterFragment() : Fragment() {
         })*/
 
         binding.registerBtn.setOnClickListener {
+            isNavigated = false
             viewModel.onEvent(RegisterEvent.Submit)
             /*    bundle.putString(Constants.FROM_FRAGMENT,"RegisterFragment")
                 Navigation.findNavController(it).navigate(R.id.action_swipeLoginFragment_to_otpFragment,bundle)*/
         }
 
-        viewModel.registrationStateFlow.onEach { resource ->
+       registerFlowJob = viewModel.registrationStateFlow.onEach { resource ->
             when (resource) {
                 is Resource.Loading -> {
                     Log.i("resource", "Loading")
                 }
                 is Resource.Success -> {
-                    Log.i("registerResponse", "${resource.data?.data}")
+                    Log.i("registerResponse", "${resource.data?.data} and ${isNavigated}")
 
                     val registerData = resource.data?.data
                     if (registerData != null && !isNavigated) {
@@ -238,7 +239,7 @@ class RegisterFragment() : Fragment() {
 
         viewModel.validationEvents.onEach { event ->
             when (event) {
-                is ValidationEvent.Success -> {
+                is ValidationRegisterEvent.Success -> {
                     Log.i("validation", "Success")
                     var requestEntity = RegisterRequestEntity(
                         name = event.name,
@@ -251,7 +252,7 @@ class RegisterFragment() : Fragment() {
                     viewModel.register(requestEntity)
                 }
 
-                is ValidationEvent.Error -> {
+                is ValidationRegisterEvent.Error -> {
 //                                binding.passwordTxt.error = null
                     if (event.nameError != null
                     ) {
@@ -373,5 +374,8 @@ class RegisterFragment() : Fragment() {
         }.launchIn(lifecycleScope)
     }
 
-
+    override fun onDestroyView() {
+        registerFlowJob?.cancel()
+        super.onDestroyView()
+    }
 }

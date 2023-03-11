@@ -4,10 +4,15 @@ import android.util.Log
 import com.example.tutopiaapplication.BuildConfig
 import com.example.tutopiaapplication.data.api.ApiVersion1Service
 import com.example.tutopiaapplication.data.api.ApiVersion2Service
+import com.example.tutopiaapplication.utils.Constants
+import com.example.tutopiaapplication.utils.DataStoreUtil
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.runBlocking
+import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -68,16 +73,46 @@ class NetModule() {
 
     @Singleton
     @Provides
-    fun getInterceptedHttpClientBuilder(): OkHttpClient {
+    fun getInterceptedHttpClientBuilder(dataStoreUtil: DataStoreUtil): OkHttpClient {
         val httpClient = OkHttpClient.Builder()
 
         val logging = HttpLoggingInterceptor()
         logging.setLevel(HttpLoggingInterceptor.Level.BODY)
+
+        httpClient.addInterceptor(addBearerTokenInterceptor(dataStoreUtil))
         httpClient.addInterceptor(logging)
           /*  .connectTimeout(60, TimeUnit.SECONDS)
             .readTimeout(60, TimeUnit.SECONDS)
             .writeTimeout(60, TimeUnit.SECONDS)*/
         return httpClient.build()
+    }
+
+/*    @Provides
+    @Singleton
+    fun provideOkHttpClient(dataStoreUtil: DataStoreUtil): OkHttpClient {
+        val builder = OkHttpClient.Builder()
+
+        val logging = HttpLoggingInterceptor()
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY)
+        builder.addInterceptor(logging)
+
+
+        return builder.build()
+    }*/
+
+    private fun addBearerTokenInterceptor(dataStoreUtil: DataStoreUtil): Interceptor {
+        return Interceptor { chain ->
+            val accessToken = runBlocking {  dataStoreUtil.getData(Constants.ACCESS_TOKEN).first() }
+            if (accessToken?.isNotEmpty() == true) {
+                val request = chain.request()
+                    .newBuilder()
+                    .addHeader("Authorization", "Bearer $accessToken")
+                    .build()
+                chain.proceed(request)
+            } else {
+                chain.proceed(chain.request())
+            }
+        }
     }
 
 }

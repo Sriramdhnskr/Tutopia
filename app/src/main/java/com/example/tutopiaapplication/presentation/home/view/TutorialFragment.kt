@@ -47,7 +47,7 @@ class TutorialFragment : Fragment() , ItemClickListener{
         tutorialsAdapter = TutorialsAdapter(requireContext(), data,this)
     }
 
-    override fun onButtonClicked(model: Any, pos: Int) {
+    override fun onButtonClicked(model: Any?, pos: Int) {
         if(model is TutorialDetails)
         {
             Toast.makeText(requireContext(),"Video played for ${model.tutorialTitle}",Toast.LENGTH_LONG).show()

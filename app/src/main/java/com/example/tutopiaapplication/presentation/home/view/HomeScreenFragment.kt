@@ -99,7 +99,7 @@ class HomeScreenFragment : Fragment() , ItemClickListener , Listener , TwoButton
         productsAdapter = ProductsAdapter(requireContext(), data,this,this)
     }
 
-    override fun onButtonClicked(model: Any, pos: Int) {
+    override fun onButtonClicked(model: Any?, pos: Int) {
         if(model is ProductDetails)
         {
             bundle.putParcelable(Constants.PRODUCT_DETAILS,model)

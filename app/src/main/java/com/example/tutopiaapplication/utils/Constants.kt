@@ -15,10 +15,16 @@ object Constants {
     const val REGISTER_USERID = "user_id"
     const val REGISTER_OTP = "Otp"
     const val REGISTER_DETAILS = "register details"
+    const val PROFILE_DETAILS = "profile details"
+    const val PROFILE = "profile"
+    const val DEVICE_TOKEN = "student_device_token_123123"
+    const val PLATFORM = "android"
+    const val USER_ACCESS_TOKEN = "access_token"
 
     val FIRST_LOGIN_COMPLETE = booleanPreferencesKey("first_login_complete")
     val USER_ID = stringPreferencesKey("user_id")
     val OTP = stringPreferencesKey("Otp")
+    val ACCESS_TOKEN = stringPreferencesKey("access_token")
     val ACCOUNT_ID = stringPreferencesKey("account_id")
     val USERNAME = stringPreferencesKey("username")
 }

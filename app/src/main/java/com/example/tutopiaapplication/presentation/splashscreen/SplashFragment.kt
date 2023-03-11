@@ -12,6 +12,7 @@ import androidx.navigation.findNavController
 import com.example.tutopiaapplication.R
 import com.example.tutopiaapplication.databinding.FragmentSplashBinding
 import dagger.hilt.android.AndroidEntryPoint
+import okhttp3.logging.HttpLoggingInterceptor
 
 @AndroidEntryPoint
 class SplashFragment : Fragment() {

@@ -87,7 +87,7 @@ class SubjectFragment : Fragment() , ItemClickListener{
         productsAdapter = ProductsAdapter(requireContext(), data,this)
     }
 
-    override fun onButtonClicked(model: Any, pos: Int) {
+    override fun onButtonClicked(model: Any?, pos: Int) {
         if(model is ChapterDetails)
         {
             bundle.putParcelable(Constants.CHAPTER_DETAILS,model)

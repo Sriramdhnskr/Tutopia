@@ -77,7 +77,7 @@ class ClassFragment : Fragment() , ItemClickListener {
         productsAdapter = ProductsAdapter(requireContext(), data,this)
     }
 
-    override fun onButtonClicked(model: Any, pos: Int) {
+    override fun onButtonClicked(model: Any?, pos: Int) {
 
         if(model is SubjectDetails)
         {

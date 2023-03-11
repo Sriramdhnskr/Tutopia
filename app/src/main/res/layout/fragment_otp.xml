@@ -5,7 +5,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.auth.login.OtpFragment">
+    tools:context=".presentation.auth.otp.view.OtpFragment">
 
     <include android:id="@+id/title" layout="@layout/title_card_layout"/>
 
@@ -17,7 +17,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.0">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -158,20 +158,23 @@
                 android:layout_marginBottom="30dp"
                 android:text="@string/didn_t_receive_otp_resend"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/guideline9"
-                app:layout_constraintHorizontal_bias="0.45"
-                app:layout_constraintStart_toStartOf="@+id/guideline8"
-                app:layout_constraintTop_toBottomOf="@+id/verifyBtn"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintEnd_toStartOf="@+id/resendTxt"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/verifyBtn" />
 
             <TextView
-                android:id="@+id/resnedTxt"
+                android:id="@+id/resendTxt"
                 style="@style/ProductSansBold16Black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="@string/resend_text"
+                android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="@+id/sendDescTxt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/sendDescTxt"
                 app:layout_constraintTop_toTopOf="@+id/sendDescTxt" />
 

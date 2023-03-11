@@ -1,6 +1,8 @@
 package com.example.tutopiaapplication.presentation.di.core
 
+import com.example.tutopiaapplication.domain.repository.OtpRepository
 import com.example.tutopiaapplication.domain.repository.RegisterRepository
+import com.example.tutopiaapplication.domain.repository.UpdateProfileRepository
 import com.example.tutopiaapplication.domain.usecase.*
 import dagger.Module
 import dagger.Provides
@@ -44,6 +46,30 @@ class UseCaseModule {
 
     @Singleton
     @Provides
+    fun provideUpdatePinCodeUseCase() : ValidatePinCode{
+        return ValidatePinCode()
+    }
+
+    @Singleton
+    @Provides
+    fun provideUpdateSchoolUseCase() : ValidateSchool{
+        return ValidateSchool()
+    }
+
+    @Singleton
+    @Provides
+    fun provideUpdatePasswordUseCase() : ValidatePassword{
+        return ValidatePassword()
+    }
+
+    @Singleton
+    @Provides
+    fun provideUpdateConfirmPasswordUseCase() : ValidateConfirmPassword{
+        return ValidateConfirmPassword()
+    }
+
+    @Singleton
+    @Provides
     fun provideRegisterUseCase(registerRepository: RegisterRepository) : RegisterUserUseCase {
         return RegisterUserUseCase(registerRepository)
     }
@@ -60,4 +86,27 @@ class UseCaseModule {
         return GetClassesListUseCase(registerRepository)
     }
 
+    @Singleton
+    @Provides
+    fun provideVerifyOtpUseCase(otpRepository: OtpRepository) : VerifyOtpUseCase {
+        return VerifyOtpUseCase(otpRepository)
+    }
+
+    @Singleton
+    @Provides
+    fun provideRequestOtpUseCase(otpRepository: OtpRepository) : RequestOtpUseCase {
+        return RequestOtpUseCase(otpRepository)
+    }
+
+    @Singleton
+    @Provides
+    fun provideUpdateProfileUseCase(updateProfileRepository: UpdateProfileRepository) : UpdateProfileUseCase {
+        return UpdateProfileUseCase(updateProfileRepository)
+    }
+
+    @Singleton
+    @Provides
+    fun provideGetSchoolListUseCase(updateProfileRepository: UpdateProfileRepository) : GetSchoolsListUseCase {
+        return GetSchoolsListUseCase(updateProfileRepository)
+    }
 }
