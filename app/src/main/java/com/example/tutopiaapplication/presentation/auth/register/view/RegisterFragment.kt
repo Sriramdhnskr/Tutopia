@@ -73,6 +73,8 @@ class RegisterFragment() : Fragment() {
 
         binding = FragmentRegisterBinding.inflate(inflater)
 
+        bundle.putString(Constants.FROM_FRAGMENT,"RegisterFragment")
+
         viewModel = ViewModelProvider(this, registerFactory).get(RegisterViewModel::class.java)
 
         viewLifecycleOwner.lifecycleScope.launchWhenStarted {

@@ -1,5 +1,8 @@
 package com.example.tutopiaapplication.data.api
 
+import com.example.tutopiaapplication.data.api.model.forgotPassword.ForgotPasswordResponseEntity
+import com.example.tutopiaapplication.data.api.model.resetPassword.ResetPasswordRequestEntity
+import com.example.tutopiaapplication.data.api.model.resetPassword.ResetPasswordResponseEntity
 import com.example.tutopiaapplication.data.api.model.register.RegisterRequestEntity
 import com.example.tutopiaapplication.data.api.model.register.RegisterResponseEntity
 import com.example.tutopiaapplication.data.api.model.register.otp.OtpRequestEntity
@@ -37,4 +40,12 @@ interface ApiVersion2Service {
         @Part("school_name") schoolName: RequestBody?= null,
         @Part("school_code") schoolCode: RequestBody?= null,
     ): Response<UpdateProfileResponse>
+
+
+    @POST("auth/forgot-password")
+    suspend fun forgotPassword(@Body otpRequestEntity: OtpRequestEntity): Response<ForgotPasswordResponseEntity>
+
+    @POST("auth/reset-password")
+    suspend fun resetPassword(@Body resetPasswordRequestEntity: ResetPasswordRequestEntity): Response<ResetPasswordResponseEntity>
+
 }

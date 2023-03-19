@@ -20,6 +20,8 @@ object Constants {
     const val DEVICE_TOKEN = "student_device_token_123123"
     const val PLATFORM = "android"
     const val USER_ACCESS_TOKEN = "access_token"
+    const val MOBILE_NUMBER = "mobile number"
+    const val PASSWORD = "password"
 
     val FIRST_LOGIN_COMPLETE = booleanPreferencesKey("first_login_complete")
     val USER_ID = stringPreferencesKey("user_id")

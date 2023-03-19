@@ -66,7 +66,7 @@
     </fragment>
     <fragment
         android:id="@+id/forgotPasswordFragment"
-        android:name="com.example.tutopiaapplication.presentation.auth.login.ForgotPasswordFragment"
+        android:name="com.example.tutopiaapplication.presentation.forgotPassword.ForgotPasswordFragment"
         android:label="fragment_forgot_password"
         tools:layout="@layout/fragment_forgot_password" >
         <action
@@ -76,6 +76,14 @@
             android:id="@+id/action_forgotPasswordFragment_to_profileFragment"
             app:destination="@id/profileFragment"
             app:popUpTo="@id/profileFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_otpFragment"
+            app:destination="@id/otpFragment" />
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_swipeLoginFragment"
+            app:destination="@id/swipeLoginFragment"
+            app:popUpTo="@id/forgotPasswordFragment"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment

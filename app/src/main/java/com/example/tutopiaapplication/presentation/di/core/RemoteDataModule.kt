@@ -2,14 +2,8 @@ package com.example.tutopiaapplication.presentation.di.core
 
 import com.example.tutopiaapplication.data.api.ApiVersion1Service
 import com.example.tutopiaapplication.data.api.ApiVersion2Service
-import com.example.tutopiaapplication.data.repository.datasource.RegisterDataSource
-import com.example.tutopiaapplication.data.repository.datasource.RequestOtpDataSource
-import com.example.tutopiaapplication.data.repository.datasource.UpdateProfileDataSource
-import com.example.tutopiaapplication.data.repository.datasource.VerifyOtpDataSource
-import com.example.tutopiaapplication.data.repository.datasourceImpl.RegisterDataSourceImpl
-import com.example.tutopiaapplication.data.repository.datasourceImpl.RequestOtpDataSourceImpl
-import com.example.tutopiaapplication.data.repository.datasourceImpl.UpdateProfileDataSourceImpl
-import com.example.tutopiaapplication.data.repository.datasourceImpl.VerifyOtpDataSourceImpl
+import com.example.tutopiaapplication.data.repository.datasource.*
+import com.example.tutopiaapplication.data.repository.datasourceImpl.*
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -47,5 +41,17 @@ class RemoteDataModule() {
     @Provides
     fun provideUpdateProfileDataSource(apiVersion1Service: ApiVersion1Service, apiVersion2Service: ApiVersion2Service): UpdateProfileDataSource {
         return UpdateProfileDataSourceImpl(apiVersion2Service, apiVersion1Service)
+    }
+
+    @Singleton
+    @Provides
+    fun provideLoginUserDataSource(apiVersion1Service: ApiVersion1Service, apiVersion2Service: ApiVersion2Service): LoginUserDataSource {
+        return LoginUserDataSourceImpl(apiVersion2Service, apiVersion1Service)
+    }
+
+    @Singleton
+    @Provides
+    fun providePasswordDataSource(apiVersion1Service: ApiVersion1Service, apiVersion2Service: ApiVersion2Service): PasswordDataSource {
+        return PasswordDataSourceImpl(apiVersion2Service, apiVersion1Service)
     }
 }

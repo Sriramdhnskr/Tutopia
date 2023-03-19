@@ -1,8 +1,6 @@
 package com.example.tutopiaapplication.presentation.di.core
 
-import com.example.tutopiaapplication.domain.repository.OtpRepository
-import com.example.tutopiaapplication.domain.repository.RegisterRepository
-import com.example.tutopiaapplication.domain.repository.UpdateProfileRepository
+import com.example.tutopiaapplication.domain.repository.*
 import com.example.tutopiaapplication.domain.usecase.*
 import dagger.Module
 import dagger.Provides
@@ -108,5 +106,29 @@ class UseCaseModule {
     @Provides
     fun provideGetSchoolListUseCase(updateProfileRepository: UpdateProfileRepository) : GetSchoolsListUseCase {
         return GetSchoolsListUseCase(updateProfileRepository)
+    }
+
+    @Singleton
+    @Provides
+    fun provideLoginUserUseCase(loginRepository: LoginRepository) : LoginUserUseCase {
+        return LoginUserUseCase(loginRepository)
+    }
+
+    @Singleton
+    @Provides
+    fun provideVerifyLoginUseCase(otpRepository: OtpRepository) : VerifyLoginUseCase {
+        return VerifyLoginUseCase(otpRepository)
+    }
+
+    @Singleton
+    @Provides
+    fun provideForgotPasswordUseCase(passwordRepository: PasswordRepository) : ForgotPasswordUseCase {
+        return ForgotPasswordUseCase(passwordRepository)
+    }
+
+    @Singleton
+    @Provides
+    fun provideResetPasswordUseCase(passwordRepository: PasswordRepository) : ResetPasswordUseCase {
+        return ResetPasswordUseCase(passwordRepository)
     }
 }

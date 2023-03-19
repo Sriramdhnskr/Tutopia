@@ -4,193 +4,194 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".presentation.auth.login.LoginFragment">
 
-<androidx.core.widget.NestedScrollView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:fillViewport="true">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/greyWhite_background">
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
 
-        <EditText
-            android:id="@+id/passwordEditTxt"
-            style="@style/ProductSansRegular18Black"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:textColorHint="@color/grey_text"
-            android:theme="@style/MyEditTextTheme"
-            app:layout_constraintEnd_toStartOf="@+id/orTxt"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintHorizontal_chainStyle="spread_inside"
-            app:layout_constraintStart_toStartOf="@+id/guideline4"
-            app:layout_constraintTop_toBottomOf="@+id/mobilenoEditTxt" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/greyWhite_background">
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_begin="24dp" />
+            <EditText
+                android:id="@+id/passwordEditTxt"
+                style="@style/ProductSansRegular18Black"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColorHint="@color/grey_text"
+                android:theme="@style/MyEditTextTheme"
+                app:layout_constraintEnd_toStartOf="@+id/orTxt"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/mobilenoEditTxt" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_end="24dp" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="24dp" />
 
-        <EditText
-            android:id="@+id/mobilenoEditTxt"
-            style="@style/ProductSansRegular18Black"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:hint="Mobile No."
-            android:inputType="textPersonName"
-            android:textColorHint="@color/grey_text"
-            android:theme="@style/MyEditTextTheme"
-            app:layout_constraintEnd_toStartOf="@+id/guideline5"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/guideline4"
-            app:layout_constraintTop_toBottomOf="@+id/loginDescTxt" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="24dp" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="0dp"
-            android:layout_height="200dp"
-            android:layout_marginTop="30dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/login"
-            app:layout_constraintDimensionRatio="1:1"
-            app:layout_constraintEnd_toStartOf="@+id/guideline5"
-            app:layout_constraintStart_toStartOf="@+id/guideline4"
-            app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/mobilenoEditTxt"
+                style="@style/ProductSansRegular18Black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="Mobile No."
+                android:maxLength="10"
+                android:inputType="number"
+                android:textColorHint="@color/grey_text"
+                android:theme="@style/MyEditTextTheme"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/loginDescTxt" />
 
-        <TextView
-            android:id="@+id/loginHeaderTxt"
-            style="@style/ProductSansBold35Black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Login"
-            app:layout_constraintEnd_toStartOf="@+id/guideline5"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/guideline4"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="30dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/login"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/loginDescTxt"
-            style="@style/ProductSansRegular20Black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Glad to see you!"
-            app:layout_constraintEnd_toStartOf="@+id/guideline5"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/loginHeaderTxt"
-            app:layout_constraintTop_toBottomOf="@+id/loginHeaderTxt" />
+            <TextView
+                android:id="@+id/loginHeaderTxt"
+                style="@style/ProductSansBold35Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Login"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/loginBtn"
-            style="@style/BtnFont"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/ic_blue_gradient_bg"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
-            android:text="Login"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            app:backgroundTint="@null"
-            app:layout_constraintEnd_toStartOf="@+id/guideline5"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/guideline4"
-            app:layout_constraintTop_toBottomOf="@+id/passwordEditTxt" />
+            <TextView
+                android:id="@+id/loginDescTxt"
+                style="@style/ProductSansRegular20Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Glad to see you!"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/loginHeaderTxt"
+                app:layout_constraintTop_toBottomOf="@+id/loginHeaderTxt" />
 
-        <TextView
-            android:id="@+id/registerdescTxt"
-            style="@style/ProductSansRegular16Black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="New Student?"
-            app:layout_constraintEnd_toStartOf="@+id/registerTxt"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toStartOf="@+id/loginBtn"
-            app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/loginBtn"
+                style="@style/BtnFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/ic_blue_gradient_bg"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:backgroundTint="@null"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/passwordEditTxt" />
 
-        <TextView
-            android:id="@+id/registerTxt"
-            style="@style/ProductSansBold16Black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:text="@string/register_underline_text"
-            app:layout_constraintBottom_toBottomOf="@+id/registerdescTxt"
-            app:layout_constraintEnd_toEndOf="@+id/loginBtn"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/registerdescTxt"
-            app:layout_constraintTop_toTopOf="@+id/registerdescTxt" />
+            <TextView
+                android:id="@+id/registerdescTxt"
+                style="@style/ProductSansRegular16Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="New Student?"
+                app:layout_constraintEnd_toStartOf="@+id/registerTxt"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@+id/loginBtn"
+                app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
 
-        <TextView
-            android:id="@+id/forgetPasswordTxt"
-            style="@style/ProductSansBold16Black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:text="Forgot Password"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/loginBtn"
-            app:layout_constraintStart_toStartOf="@+id/guideline4"
-            app:layout_constraintTop_toBottomOf="@+id/registerdescTxt"
-            app:layout_constraintVertical_bias="1.0" />
+            <TextView
+                android:id="@+id/registerTxt"
+                style="@style/ProductSansBold16Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/register_underline_text"
+                app:layout_constraintBottom_toBottomOf="@+id/registerdescTxt"
+                app:layout_constraintEnd_toEndOf="@+id/loginBtn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/registerdescTxt"
+                app:layout_constraintTop_toTopOf="@+id/registerdescTxt" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/otpBtn"
-            style="@style/BtnFont"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/secondary_light"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
-            android:paddingHorizontal="15dp"
-            android:text="Request OTP"
-            android:textAllCaps="false"
-            android:textColor="@color/primary_dark"
-            android:textSize="16sp"
-            app:cornerRadius="24dp"
-            app:layout_constraintBottom_toBottomOf="@+id/passwordEditTxt"
-            app:layout_constraintEnd_toStartOf="@+id/guideline5"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/orTxt"
-            app:layout_constraintTop_toTopOf="@+id/passwordEditTxt" />
+            <TextView
+                android:id="@+id/forgetPasswordTxt"
+                style="@style/ProductSansBold16Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Forgot Password"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/loginBtn"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/registerdescTxt"
+                app:layout_constraintVertical_bias="1.0" />
 
-        <TextView
-            android:id="@+id/orTxt"
-            style="@style/ProductSansRegular16Grey"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Or"
-            app:layout_constraintBottom_toBottomOf="@+id/passwordEditTxt"
-            app:layout_constraintEnd_toStartOf="@+id/otpBtn"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/passwordEditTxt"
-            app:layout_constraintTop_toTopOf="@+id/passwordEditTxt" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/otpBtn"
+                style="@style/BtnFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondary_light"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:paddingHorizontal="15dp"
+                android:text="Request OTP"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_dark"
+                android:textSize="16sp"
+                app:cornerRadius="24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/passwordEditTxt"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/orTxt"
+                app:layout_constraintTop_toTopOf="@+id/passwordEditTxt" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.core.widget.NestedScrollView>
+            <TextView
+                android:id="@+id/orTxt"
+                style="@style/ProductSansRegular16Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Or"
+                app:layout_constraintBottom_toBottomOf="@+id/passwordEditTxt"
+                app:layout_constraintEnd_toStartOf="@+id/otpBtn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/passwordEditTxt"
+                app:layout_constraintTop_toTopOf="@+id/passwordEditTxt" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 </layout>
